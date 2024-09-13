@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="96ae7d43-e860-4572-9c80-6b0622b7b6ab" name="181.54_DeeoDFA_v3">
+        <fileTransfer accessType="SFTP" host="10.254.181.54" port="22" sshConfigId="b549774b-2e7e-417b-84a8-22e57a995303" sshConfig="cs_lzhan011@10.254.181.54:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

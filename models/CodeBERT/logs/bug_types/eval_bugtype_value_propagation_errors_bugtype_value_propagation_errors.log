@@ -1,0 +1,22 @@
+08/21/2022 21:23:34 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of the model checkpoint at microsoft/codebert-base were not used when initializing RobertaForSequenceClassification: ['pooler.dense.weight', 'pooler.dense.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at microsoft/codebert-base and are newly initialized: ['classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+08/21/2022 21:23:37 - INFO - __main__ -   Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=400, cache_dir='', config_name='', device=device(type='cuda'), do_eval=True, do_lower_case=False, do_test=True, do_train=False, epoch=5, eval_all_checkpoints=False, eval_batch_size=64, eval_data_file='../data/bug_type/bugtype_value_propagation_errors/valid.jsonl', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', gradient_accumulation_steps=1, learning_rate=2e-05, local_rank=-1, logging_steps=50, max_grad_norm=1.0, max_steps=-1, mlm=False, mlm_probability=0.15, model_name_or_path='microsoft/codebert-base', model_type='roberta', n_gpu=1, no_cuda=False, num_train_epochs=1.0, output_dir='./saved_models', output_folder_name='bugtype_value_propagation_errors', overwrite_cache=False, overwrite_output_dir=False, per_gpu_eval_batch_size=64, per_gpu_train_batch_size=32, save_steps=50, save_total_limit=None, seed=1, server_ip='', server_port='', start_epoch=0, start_step=0, test_data_file='../data/bug_type/bugtype_value_propagation_errors/test.jsonl', tokenizer_name='microsoft/codebert-base', train_batch_size=32, train_data_file='../data/bug_type/bugtype_value_propagation_errors/train.jsonl', warmup_steps=0, weight_decay=0.0)
+08/21/2022 21:23:42 - INFO - __main__ -   ***** Running evaluation *****
+08/21/2022 21:23:42 - INFO - __main__ -     Num examples = 1512
+08/21/2022 21:23:42 - INFO - __main__ -     Batch size = 64
+08/21/2022 21:23:52 - INFO - __main__ -   ***** Eval results *****
+08/21/2022 21:23:52 - INFO - __main__ -     eval_acc = 0.9511
+08/21/2022 21:23:52 - INFO - __main__ -     eval_loss = 0.2209
+08/21/2022 21:23:55 - INFO - __main__ -   ***** Running Test *****
+08/21/2022 21:23:55 - INFO - __main__ -     Num examples = 1512
+08/21/2022 21:23:55 - INFO - __main__ -     Batch size = 64
+  0%|          | 0/24 [00:00<?, ?it/s]  4%|▍         | 1/24 [00:00<00:08,  2.69it/s]  8%|▊         | 2/24 [00:00<00:08,  2.71it/s] 12%|█▎        | 3/24 [00:01<00:07,  2.73it/s] 17%|█▋        | 4/24 [00:01<00:07,  2.77it/s] 21%|██        | 5/24 [00:01<00:06,  2.79it/s] 25%|██▌       | 6/24 [00:02<00:06,  2.78it/s] 29%|██▉       | 7/24 [00:02<00:06,  2.75it/s] 33%|███▎      | 8/24 [00:02<00:05,  2.77it/s] 38%|███▊      | 9/24 [00:03<00:05,  2.80it/s] 42%|████▏     | 10/24 [00:03<00:05,  2.79it/s] 46%|████▌     | 11/24 [00:03<00:04,  2.80it/s] 50%|█████     | 12/24 [00:04<00:04,  2.80it/s] 54%|█████▍    | 13/24 [00:04<00:03,  2.79it/s] 58%|█████▊    | 14/24 [00:05<00:03,  2.80it/s] 62%|██████▎   | 15/24 [00:05<00:03,  2.81it/s] 67%|██████▋   | 16/24 [00:05<00:02,  2.79it/s] 71%|███████   | 17/24 [00:06<00:02,  2.77it/s] 75%|███████▌  | 18/24 [00:06<00:02,  2.78it/s] 79%|███████▉  | 19/24 [00:06<00:01,  2.79it/s] 83%|████████▎ | 20/24 [00:07<00:01,  2.81it/s] 88%|████████▊ | 21/24 [00:07<00:01,  2.81it/s] 92%|█████████▏| 22/24 [00:07<00:00,  2.82it/s] 96%|█████████▌| 23/24 [00:08<00:00,  2.82it/s]100%|██████████| 24/24 [00:08<00:00,  3.18it/s]100%|██████████| 24/24 [00:08<00:00,  2.84it/s]
+
+Accuracy: 0.9484126984126984
+Precision: 0.75
+F-measure: 0.35
+Recall: 0.22826086956521738

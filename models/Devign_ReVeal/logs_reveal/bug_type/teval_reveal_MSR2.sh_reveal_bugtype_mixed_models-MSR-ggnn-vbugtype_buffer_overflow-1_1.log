@@ -1,0 +1,30 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_mixed/GGNNinput_graph_ggnn_1_vbugtype_mixed.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(74026, 200)
+(74026,)
+74026
+valid
+(9069, 200)
+(9069,)
+9069
+test
+(9214, 200)
+(9214,)
+9214
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_mixed/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 9214 #Batches 144 first 5: [6, 18, 22, 38, 62] last 5: [117196, 117220, 117228, 117291, 117319]
+Number of Holdout Entries 0 #Batches 0 first 5: [] last 5: []
+144
+  0%|          | 0/144 [00:00<?, ?it/s]  1%|          | 1/144 [00:00<02:07,  1.12it/s] 25%|██▌       | 36/144 [00:00<00:02, 49.16it/s] 48%|████▊     | 69/144 [00:01<00:00, 94.74it/s] 66%|██████▌   | 95/144 [00:01<00:00, 125.83it/s] 84%|████████▍ | 121/144 [00:01<00:00, 150.98it/s]100%|██████████| 144/144 [00:01<00:00, 103.10it/s]
+HOLDOUT RESULTS
+90.89429129585413 29.482071713147413 41.88679245283019 34.60639127045986

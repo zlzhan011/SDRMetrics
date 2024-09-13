@@ -1,0 +1,825 @@
+[08/20/2022 - 12:08:54] File "Devign/main.py", line 68  	Reading already processed data from data/MSR/full_experiment_real_data_processed/processed.bin!	
+load json -> msr mapping...
+done loading json -> msr mapping
+0 keys missing from splits.csv
+5746 keys skipped because _after_
+skipped 5746 keys
+[08/20/2022 - 12:13:05] File "Devign/main.py", line 85  	89193	11130	11256	0	
+model: DevignModel(
+  (ggnn): GatedGraphConv(
+    (linears): ModuleList(
+      (0): Linear(in_features=200, out_features=200, bias=True)
+      (1): Linear(in_features=200, out_features=200, bias=True)
+      (2): Linear(in_features=200, out_features=200, bias=True)
+      (3): Linear(in_features=200, out_features=200, bias=True)
+      (4): Linear(in_features=200, out_features=200, bias=True)
+    )
+    (gru): GRUCell(200, 200)
+  )
+  (conv_l1): Conv1d(200, 200, kernel_size=(3,), stride=(1,))
+  (maxpool1): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2): Conv1d(200, 200, kernel_size=(1,), stride=(1,))
+  (maxpool2): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l1_for_concat): Conv1d(369, 369, kernel_size=(3,), stride=(1,))
+  (maxpool1_for_concat): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2_for_concat): Conv1d(369, 369, kernel_size=(1,), stride=(1,))
+  (maxpool2_for_concat): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (mlp_z): Linear(in_features=369, out_features=1, bias=True)
+  (mlp_y): Linear(in_features=200, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+[08/20/2022 - 12:13:05] File "Devign/main.py", line 100  	Total Parameters : 1148553	
+[08/20/2022 - 12:13:05] File "Devign/main.py", line 101  	####################################################################################################	
+[08/20/2022 - 12:13:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 66  	Start Training	
+[08/20/2022 - 12:13:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 63		Train Loss    119.843	Valid Loss    53.721	f1:  3.32	Patience 0	
+[08/20/2022 - 12:13:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:14:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 127		Train Loss     68.695	Valid Loss    43.078	f1:  0.00	Patience 1	
+[08/20/2022 - 12:14:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:15:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 191		Train Loss     63.064	Valid Loss    41.957	f1:  0.00	Patience 2	
+[08/20/2022 - 12:15:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:15:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 255		Train Loss     57.404	Valid Loss    40.226	f1:  0.00	Patience 3	
+[08/20/2022 - 12:15:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:16:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 319		Train Loss     59.502	Valid Loss    39.544	f1:  0.00	Patience 4	
+[08/20/2022 - 12:16:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:17:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 383		Train Loss     57.104	Valid Loss    39.324	f1:  0.00	Patience 5	
+[08/20/2022 - 12:17:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:17:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 447		Train Loss     55.787	Valid Loss    39.116	f1:  0.00	Patience 6	
+[08/20/2022 - 12:17:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:18:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 511		Train Loss     52.593	Valid Loss    38.998	f1:  0.00	Patience 7	
+[08/20/2022 - 12:18:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:18:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 575		Train Loss     56.052	Valid Loss    39.299	f1:  0.00	Patience 8	
+[08/20/2022 - 12:18:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:19:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 639		Train Loss     55.504	Valid Loss    40.596	f1:  0.00	Patience 9	
+[08/20/2022 - 12:19:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:19:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 703		Train Loss     55.802	Valid Loss    38.365	f1:  0.00	Patience 10	
+[08/20/2022 - 12:19:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:20:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 767		Train Loss     54.713	Valid Loss    38.701	f1:  0.00	Patience 11	
+[08/20/2022 - 12:20:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:20:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 831		Train Loss     52.377	Valid Loss    38.575	f1:  0.96	Patience 12	
+[08/20/2022 - 12:20:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:21:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 895		Train Loss     55.329	Valid Loss    38.373	f1:  0.00	Patience 13	
+[08/20/2022 - 12:21:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:21:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 959		Train Loss     52.738	Valid Loss    38.413	f1:  3.13	Patience 14	
+[08/20/2022 - 12:21:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:22:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1023		Train Loss     53.917	Valid Loss    38.094	f1:  0.32	Patience 15	
+[08/20/2022 - 12:22:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:22:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1087		Train Loss     53.261	Valid Loss    38.092	f1:  1.90	Patience 16	
+[08/20/2022 - 12:22:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:23:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1151		Train Loss     50.710	Valid Loss    40.042	f1:  8.41	Patience 0	
+[08/20/2022 - 12:23:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:24:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1215		Train Loss     48.123	Valid Loss    39.987	f1:  9.17	Patience 0	
+[08/20/2022 - 12:24:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:24:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1279		Train Loss     53.497	Valid Loss    38.205	f1:  2.83	Patience 1	
+[08/20/2022 - 12:24:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:25:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1343		Train Loss     53.041	Valid Loss    37.973	f1:  2.82	Patience 2	
+[08/20/2022 - 12:25:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:26:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1407		Train Loss     51.532	Valid Loss    39.346	f1:  2.82	Patience 3	
+[08/20/2022 - 12:26:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:26:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1471		Train Loss     47.870	Valid Loss    38.587	f1:  8.20	Patience 4	
+[08/20/2022 - 12:26:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:27:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1535		Train Loss     52.456	Valid Loss    38.180	f1:  3.11	Patience 5	
+[08/20/2022 - 12:27:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:28:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1599		Train Loss     47.979	Valid Loss    37.906	f1:  6.94	Patience 6	
+[08/20/2022 - 12:28:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:28:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1663		Train Loss     48.704	Valid Loss    38.527	f1:  8.95	Patience 7	
+[08/20/2022 - 12:28:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:29:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1727		Train Loss     51.804	Valid Loss    38.052	f1:  5.51	Patience 8	
+[08/20/2022 - 12:29:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:30:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1791		Train Loss     47.147	Valid Loss    37.975	f1:  5.77	Patience 9	
+[08/20/2022 - 12:30:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:30:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1855		Train Loss     43.902	Valid Loss    40.361	f1:  4.89	Patience 10	
+[08/20/2022 - 12:30:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:31:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1919		Train Loss     47.848	Valid Loss    38.979	f1:  9.70	Patience 0	
+[08/20/2022 - 12:31:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:32:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 1983		Train Loss     50.063	Valid Loss    38.444	f1:  5.42	Patience 1	
+[08/20/2022 - 12:32:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:32:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2047		Train Loss     46.854	Valid Loss    39.554	f1:  8.19	Patience 2	
+[08/20/2022 - 12:32:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:33:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2111		Train Loss     46.782	Valid Loss    39.749	f1:  7.10	Patience 3	
+[08/20/2022 - 12:33:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:34:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2175		Train Loss     47.487	Valid Loss    40.354	f1:  6.58	Patience 4	
+[08/20/2022 - 12:34:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:34:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2239		Train Loss     44.878	Valid Loss    39.205	f1:  8.60	Patience 5	
+[08/20/2022 - 12:34:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:35:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2303		Train Loss     42.999	Valid Loss    38.911	f1:  7.41	Patience 6	
+[08/20/2022 - 12:35:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:36:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2367		Train Loss     45.672	Valid Loss    40.533	f1:  3.99	Patience 7	
+[08/20/2022 - 12:36:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:36:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2431		Train Loss     44.958	Valid Loss    42.382	f1: 11.56	Patience 0	
+[08/20/2022 - 12:36:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:37:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2495		Train Loss     42.517	Valid Loss    40.450	f1: 10.90	Patience 1	
+[08/20/2022 - 12:37:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:38:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2559		Train Loss     44.636	Valid Loss    40.464	f1:  9.67	Patience 2	
+[08/20/2022 - 12:38:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:38:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2623		Train Loss     43.602	Valid Loss    41.666	f1: 11.94	Patience 0	
+[08/20/2022 - 12:38:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:39:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2687		Train Loss     42.719	Valid Loss    41.631	f1: 12.47	Patience 0	
+[08/20/2022 - 12:39:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:40:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2751		Train Loss     42.744	Valid Loss    41.951	f1: 10.03	Patience 1	
+[08/20/2022 - 12:40:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:40:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2815		Train Loss     39.857	Valid Loss    42.996	f1: 14.73	Patience 0	
+[08/20/2022 - 12:40:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:41:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2879		Train Loss     38.462	Valid Loss    41.696	f1:  5.45	Patience 1	
+[08/20/2022 - 12:41:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:42:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 2943		Train Loss     39.987	Valid Loss    42.015	f1:  8.65	Patience 2	
+[08/20/2022 - 12:42:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:42:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3007		Train Loss     41.461	Valid Loss    44.704	f1: 13.22	Patience 3	
+[08/20/2022 - 12:42:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:43:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3071		Train Loss     41.201	Valid Loss    45.027	f1: 11.94	Patience 4	
+[08/20/2022 - 12:43:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:44:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3135		Train Loss     40.990	Valid Loss    41.565	f1: 10.48	Patience 5	
+[08/20/2022 - 12:44:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:44:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3199		Train Loss     36.481	Valid Loss    42.818	f1: 11.07	Patience 6	
+[08/20/2022 - 12:44:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:45:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3263		Train Loss     36.803	Valid Loss    45.181	f1: 16.39	Patience 0	
+[08/20/2022 - 12:45:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:46:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3327		Train Loss     35.835	Valid Loss    44.366	f1: 11.76	Patience 1	
+[08/20/2022 - 12:46:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:46:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3391		Train Loss     37.458	Valid Loss    44.000	f1:  8.98	Patience 2	
+[08/20/2022 - 12:46:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:47:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3455		Train Loss     38.259	Valid Loss    47.167	f1: 14.63	Patience 3	
+[08/20/2022 - 12:47:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:48:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3519		Train Loss     35.625	Valid Loss    50.542	f1: 17.61	Patience 0	
+[08/20/2022 - 12:48:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:48:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3583		Train Loss     32.345	Valid Loss    46.461	f1: 12.41	Patience 1	
+[08/20/2022 - 12:48:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:49:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3647		Train Loss     33.434	Valid Loss    46.250	f1: 10.60	Patience 2	
+[08/20/2022 - 12:49:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:50:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3711		Train Loss     34.034	Valid Loss    47.283	f1: 14.75	Patience 3	
+[08/20/2022 - 12:50:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:50:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3775		Train Loss     34.007	Valid Loss    47.043	f1: 12.68	Patience 4	
+[08/20/2022 - 12:50:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:51:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3839		Train Loss     34.699	Valid Loss    49.868	f1: 13.91	Patience 5	
+[08/20/2022 - 12:51:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:52:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3903		Train Loss     28.497	Valid Loss    57.970	f1: 16.23	Patience 6	
+[08/20/2022 - 12:52:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:52:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 3967		Train Loss     29.661	Valid Loss    56.146	f1: 20.08	Patience 0	
+[08/20/2022 - 12:52:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:53:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4031		Train Loss     31.219	Valid Loss    58.617	f1: 14.36	Patience 1	
+[08/20/2022 - 12:53:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:54:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4095		Train Loss     28.800	Valid Loss    54.034	f1: 16.23	Patience 2	
+[08/20/2022 - 12:54:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:54:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4159		Train Loss     32.302	Valid Loss    53.512	f1: 15.12	Patience 3	
+[08/20/2022 - 12:54:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:55:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4223		Train Loss     26.374	Valid Loss    59.645	f1: 16.55	Patience 4	
+[08/20/2022 - 12:55:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:56:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4287		Train Loss     25.441	Valid Loss    70.585	f1: 18.27	Patience 5	
+[08/20/2022 - 12:56:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:56:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4351		Train Loss     24.490	Valid Loss    63.229	f1: 18.63	Patience 6	
+[08/20/2022 - 12:56:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:57:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4415		Train Loss     26.588	Valid Loss    59.116	f1: 17.35	Patience 7	
+[08/20/2022 - 12:57:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:58:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4479		Train Loss     26.537	Valid Loss    68.545	f1: 20.04	Patience 8	
+[08/20/2022 - 12:58:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:58:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4543		Train Loss     26.073	Valid Loss    66.852	f1: 19.63	Patience 9	
+[08/20/2022 - 12:58:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 12:59:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4607		Train Loss     20.067	Valid Loss    71.857	f1: 19.34	Patience 10	
+[08/20/2022 - 12:59:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:00:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4671		Train Loss     22.500	Valid Loss    65.249	f1: 16.80	Patience 11	
+[08/20/2022 - 13:00:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:00:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4735		Train Loss     23.609	Valid Loss    64.858	f1: 18.07	Patience 12	
+[08/20/2022 - 13:00:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:01:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4799		Train Loss     24.213	Valid Loss    61.208	f1: 16.30	Patience 13	
+[08/20/2022 - 13:01:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:02:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4863		Train Loss     26.100	Valid Loss    54.509	f1: 13.10	Patience 14	
+[08/20/2022 - 13:02:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:02:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4927		Train Loss     19.963	Valid Loss    73.510	f1: 19.52	Patience 15	
+[08/20/2022 - 13:02:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:03:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 4991		Train Loss     18.267	Valid Loss    75.369	f1: 18.10	Patience 16	
+[08/20/2022 - 13:03:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:04:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5055		Train Loss     20.493	Valid Loss    73.211	f1: 21.14	Patience 0	
+[08/20/2022 - 13:04:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:04:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5119		Train Loss     20.218	Valid Loss    70.626	f1: 19.41	Patience 1	
+[08/20/2022 - 13:04:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:05:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5183		Train Loss     20.803	Valid Loss    73.980	f1: 18.84	Patience 2	
+[08/20/2022 - 13:05:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:06:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5247		Train Loss     21.902	Valid Loss    76.950	f1: 21.76	Patience 0	
+[08/20/2022 - 13:06:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:06:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5311		Train Loss     16.153	Valid Loss    76.875	f1: 20.02	Patience 1	
+[08/20/2022 - 13:06:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:07:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5375		Train Loss     16.869	Valid Loss    83.382	f1: 19.72	Patience 2	
+[08/20/2022 - 13:07:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:08:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5439		Train Loss     16.863	Valid Loss    77.502	f1: 19.31	Patience 3	
+[08/20/2022 - 13:08:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:08:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5503		Train Loss     20.546	Valid Loss    75.974	f1: 19.98	Patience 4	
+[08/20/2022 - 13:08:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:09:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5567		Train Loss     19.682	Valid Loss    77.315	f1: 18.78	Patience 5	
+[08/20/2022 - 13:09:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:10:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5631		Train Loss     12.860	Valid Loss    82.274	f1: 19.06	Patience 6	
+[08/20/2022 - 13:10:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:11:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5695		Train Loss     14.644	Valid Loss    83.042	f1: 22.01	Patience 0	
+[08/20/2022 - 13:11:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:11:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5759		Train Loss     15.827	Valid Loss    81.680	f1: 18.97	Patience 1	
+[08/20/2022 - 13:11:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:12:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5823		Train Loss     16.521	Valid Loss    82.579	f1: 16.99	Patience 2	
+[08/20/2022 - 13:12:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:13:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5887		Train Loss     16.625	Valid Loss    78.426	f1: 19.02	Patience 3	
+[08/20/2022 - 13:13:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:13:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 5951		Train Loss     15.078	Valid Loss    90.318	f1: 21.57	Patience 4	
+[08/20/2022 - 13:13:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:14:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6015		Train Loss     12.571	Valid Loss    85.422	f1: 17.85	Patience 5	
+[08/20/2022 - 13:14:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:15:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6079		Train Loss     12.624	Valid Loss   105.356	f1: 21.83	Patience 6	
+[08/20/2022 - 13:15:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:15:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6143		Train Loss     15.399	Valid Loss    82.344	f1: 17.03	Patience 7	
+[08/20/2022 - 13:15:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:16:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6207		Train Loss     15.966	Valid Loss    86.424	f1: 21.34	Patience 8	
+[08/20/2022 - 13:16:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:17:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6271		Train Loss     16.339	Valid Loss    77.205	f1: 18.31	Patience 9	
+[08/20/2022 - 13:17:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:17:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6335		Train Loss     11.802	Valid Loss    88.372	f1: 20.55	Patience 10	
+[08/20/2022 - 13:17:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:18:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6399		Train Loss     13.286	Valid Loss    93.858	f1: 21.10	Patience 11	
+[08/20/2022 - 13:18:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:19:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6463		Train Loss     12.342	Valid Loss    90.356	f1: 20.28	Patience 12	
+[08/20/2022 - 13:19:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:19:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6527		Train Loss     14.381	Valid Loss    85.799	f1: 22.09	Patience 0	
+[08/20/2022 - 13:19:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:20:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6591		Train Loss     13.855	Valid Loss    85.480	f1: 16.52	Patience 1	
+[08/20/2022 - 13:20:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:21:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6655		Train Loss     12.861	Valid Loss    93.615	f1: 18.89	Patience 2	
+[08/20/2022 - 13:21:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:21:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6719		Train Loss     10.853	Valid Loss    94.387	f1: 19.36	Patience 3	
+[08/20/2022 - 13:21:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:22:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6783		Train Loss     10.840	Valid Loss    90.631	f1: 19.47	Patience 4	
+[08/20/2022 - 13:22:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:23:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6847		Train Loss     12.678	Valid Loss    82.682	f1: 21.39	Patience 5	
+[08/20/2022 - 13:23:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:23:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6911		Train Loss     13.163	Valid Loss    86.198	f1: 17.35	Patience 6	
+[08/20/2022 - 13:23:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:24:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 6975		Train Loss     13.754	Valid Loss    91.230	f1: 20.74	Patience 7	
+[08/20/2022 - 13:24:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:25:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7039		Train Loss     11.699	Valid Loss    99.858	f1: 21.01	Patience 8	
+[08/20/2022 - 13:25:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:25:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7103		Train Loss     10.192	Valid Loss   103.520	f1: 21.37	Patience 9	
+[08/20/2022 - 13:25:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:26:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7167		Train Loss     11.077	Valid Loss   103.112	f1: 21.42	Patience 10	
+[08/20/2022 - 13:26:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:27:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7231		Train Loss     11.522	Valid Loss   105.183	f1: 23.54	Patience 0	
+[08/20/2022 - 13:27:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:27:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7295		Train Loss     12.973	Valid Loss   100.142	f1: 23.01	Patience 1	
+[08/20/2022 - 13:27:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:28:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7359		Train Loss     10.867	Valid Loss   105.250	f1: 21.04	Patience 2	
+[08/20/2022 - 13:28:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:28:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7423		Train Loss      9.330	Valid Loss   104.655	f1: 21.77	Patience 3	
+[08/20/2022 - 13:28:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:29:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7487		Train Loss     10.841	Valid Loss    88.115	f1: 16.61	Patience 4	
+[08/20/2022 - 13:29:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:29:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7551		Train Loss     12.744	Valid Loss    91.574	f1: 21.08	Patience 5	
+[08/20/2022 - 13:29:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:30:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7615		Train Loss     11.396	Valid Loss    90.102	f1: 20.36	Patience 6	
+[08/20/2022 - 13:30:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:30:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7679		Train Loss     12.488	Valid Loss    90.921	f1: 21.84	Patience 7	
+[08/20/2022 - 13:30:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:31:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7743		Train Loss      8.782	Valid Loss   108.444	f1: 20.62	Patience 8	
+[08/20/2022 - 13:31:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:31:57] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7807		Train Loss     10.523	Valid Loss   104.597	f1: 19.74	Patience 9	
+[08/20/2022 - 13:31:57] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:32:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7871		Train Loss     14.781	Valid Loss    91.754	f1: 20.87	Patience 10	
+[08/20/2022 - 13:32:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:32:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7935		Train Loss      9.548	Valid Loss   102.651	f1: 19.84	Patience 11	
+[08/20/2022 - 13:32:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:33:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 7999		Train Loss     10.500	Valid Loss    97.559	f1: 21.56	Patience 12	
+[08/20/2022 - 13:33:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:33:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8063		Train Loss      9.959	Valid Loss   100.878	f1: 20.87	Patience 13	
+[08/20/2022 - 13:33:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:34:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8127		Train Loss      6.857	Valid Loss   108.515	f1: 21.77	Patience 14	
+[08/20/2022 - 13:34:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:34:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8191		Train Loss     10.344	Valid Loss    93.206	f1: 17.65	Patience 15	
+[08/20/2022 - 13:34:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:35:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8255		Train Loss     10.187	Valid Loss    94.563	f1: 19.16	Patience 16	
+[08/20/2022 - 13:35:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:35:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8319		Train Loss      9.967	Valid Loss    87.050	f1: 22.45	Patience 17	
+[08/20/2022 - 13:35:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:36:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8383		Train Loss     10.268	Valid Loss    93.523	f1: 20.25	Patience 18	
+[08/20/2022 - 13:36:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:36:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8447		Train Loss      7.402	Valid Loss   103.611	f1: 22.20	Patience 19	
+[08/20/2022 - 13:36:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:37:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8511		Train Loss      7.831	Valid Loss   107.487	f1: 22.20	Patience 20	
+[08/20/2022 - 13:37:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:37:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8575		Train Loss      9.300	Valid Loss    95.927	f1: 20.85	Patience 21	
+[08/20/2022 - 13:37:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:38:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8639		Train Loss     10.443	Valid Loss   100.454	f1: 21.04	Patience 22	
+[08/20/2022 - 13:38:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:38:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8703		Train Loss     10.905	Valid Loss   101.217	f1: 24.90	Patience 0	
+[08/20/2022 - 13:38:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:39:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8767		Train Loss      9.775	Valid Loss   110.865	f1: 22.98	Patience 1	
+[08/20/2022 - 13:39:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:39:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8831		Train Loss      8.055	Valid Loss   103.107	f1: 23.37	Patience 2	
+[08/20/2022 - 13:39:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:40:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8895		Train Loss      8.997	Valid Loss   117.710	f1: 21.41	Patience 3	
+[08/20/2022 - 13:40:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:40:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 8959		Train Loss      9.416	Valid Loss   110.906	f1: 21.37	Patience 4	
+[08/20/2022 - 13:40:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:41:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9023		Train Loss     10.347	Valid Loss    98.947	f1: 21.04	Patience 5	
+[08/20/2022 - 13:41:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:41:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9087		Train Loss      9.443	Valid Loss    94.656	f1: 20.22	Patience 6	
+[08/20/2022 - 13:41:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:42:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9151		Train Loss      7.478	Valid Loss   115.044	f1: 22.29	Patience 7	
+[08/20/2022 - 13:42:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:42:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9215		Train Loss      8.452	Valid Loss    99.053	f1: 23.17	Patience 8	
+[08/20/2022 - 13:42:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:43:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9279		Train Loss      9.580	Valid Loss    99.328	f1: 21.02	Patience 9	
+[08/20/2022 - 13:43:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:43:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9343		Train Loss      8.471	Valid Loss    88.235	f1: 19.84	Patience 10	
+[08/20/2022 - 13:43:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:44:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9407		Train Loss      9.448	Valid Loss   102.303	f1: 21.34	Patience 11	
+[08/20/2022 - 13:44:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:44:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9471		Train Loss      7.349	Valid Loss   114.636	f1: 21.82	Patience 12	
+[08/20/2022 - 13:44:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:44:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9535		Train Loss      7.359	Valid Loss   104.519	f1: 23.93	Patience 13	
+[08/20/2022 - 13:44:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:45:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9599		Train Loss      9.103	Valid Loss    97.209	f1: 20.68	Patience 14	
+[08/20/2022 - 13:45:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:45:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9663		Train Loss      9.073	Valid Loss   108.333	f1: 23.46	Patience 15	
+[08/20/2022 - 13:45:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:46:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9727		Train Loss      9.007	Valid Loss   102.793	f1: 23.79	Patience 16	
+[08/20/2022 - 13:46:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:46:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9791		Train Loss      8.848	Valid Loss    98.490	f1: 24.00	Patience 17	
+[08/20/2022 - 13:46:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:47:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9855		Train Loss      8.197	Valid Loss   111.454	f1: 24.14	Patience 18	
+[08/20/2022 - 13:47:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:47:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9919		Train Loss      7.334	Valid Loss    96.322	f1: 21.21	Patience 19	
+[08/20/2022 - 13:47:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:48:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 9983		Train Loss      8.592	Valid Loss   107.868	f1: 22.33	Patience 20	
+[08/20/2022 - 13:48:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:48:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10047		Train Loss      7.992	Valid Loss   120.151	f1: 20.11	Patience 21	
+[08/20/2022 - 13:48:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:49:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10111		Train Loss     10.321	Valid Loss   116.945	f1: 24.80	Patience 22	
+[08/20/2022 - 13:49:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:49:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10175		Train Loss      7.490	Valid Loss   105.929	f1: 24.96	Patience 0	
+[08/20/2022 - 13:49:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:50:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10239		Train Loss      7.628	Valid Loss   110.088	f1: 19.38	Patience 1	
+[08/20/2022 - 13:50:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:50:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10303		Train Loss      8.136	Valid Loss   101.257	f1: 20.95	Patience 2	
+[08/20/2022 - 13:50:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:51:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10367		Train Loss      8.669	Valid Loss    88.714	f1: 20.54	Patience 3	
+[08/20/2022 - 13:51:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:51:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10431		Train Loss      9.594	Valid Loss   108.441	f1: 24.83	Patience 4	
+[08/20/2022 - 13:51:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:52:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10495		Train Loss      9.032	Valid Loss   119.649	f1: 21.17	Patience 5	
+[08/20/2022 - 13:52:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:52:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10559		Train Loss      6.534	Valid Loss   128.539	f1: 25.35	Patience 0	
+[08/20/2022 - 13:52:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:53:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10623		Train Loss      7.721	Valid Loss   123.897	f1: 22.57	Patience 1	
+[08/20/2022 - 13:53:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:53:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10687		Train Loss      8.929	Valid Loss   111.086	f1: 21.15	Patience 2	
+[08/20/2022 - 13:53:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:54:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10751		Train Loss      8.746	Valid Loss   110.101	f1: 22.60	Patience 3	
+[08/20/2022 - 13:54:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:54:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10815		Train Loss      9.919	Valid Loss   102.393	f1: 22.79	Patience 4	
+[08/20/2022 - 13:54:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:55:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10879		Train Loss      6.127	Valid Loss   114.370	f1: 22.09	Patience 5	
+[08/20/2022 - 13:55:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:55:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 10943		Train Loss      6.586	Valid Loss   114.426	f1: 21.98	Patience 6	
+[08/20/2022 - 13:55:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:56:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11007		Train Loss      7.961	Valid Loss   110.104	f1: 23.22	Patience 7	
+[08/20/2022 - 13:56:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:56:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11071		Train Loss      8.311	Valid Loss   128.458	f1: 23.24	Patience 8	
+[08/20/2022 - 13:56:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:57:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11135		Train Loss      9.050	Valid Loss   103.067	f1: 19.43	Patience 9	
+[08/20/2022 - 13:57:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:57:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11199		Train Loss      7.417	Valid Loss   117.302	f1: 20.09	Patience 10	
+[08/20/2022 - 13:57:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:58:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11263		Train Loss      7.449	Valid Loss   107.028	f1: 21.19	Patience 11	
+[08/20/2022 - 13:58:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:58:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11327		Train Loss      6.803	Valid Loss   101.310	f1: 19.78	Patience 12	
+[08/20/2022 - 13:58:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:58:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11391		Train Loss      7.907	Valid Loss   106.563	f1: 19.46	Patience 13	
+[08/20/2022 - 13:58:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:59:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11455		Train Loss      7.690	Valid Loss   121.176	f1: 22.06	Patience 14	
+[08/20/2022 - 13:59:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 13:59:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11519		Train Loss      7.993	Valid Loss   111.729	f1: 19.33	Patience 15	
+[08/20/2022 - 13:59:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:00:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11583		Train Loss      6.218	Valid Loss   119.259	f1: 21.54	Patience 16	
+[08/20/2022 - 14:00:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:00:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11647		Train Loss      6.551	Valid Loss   126.527	f1: 22.74	Patience 17	
+[08/20/2022 - 14:00:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:01:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11711		Train Loss      7.846	Valid Loss   117.057	f1: 22.20	Patience 18	
+[08/20/2022 - 14:01:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:01:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11775		Train Loss      8.185	Valid Loss   102.676	f1: 22.43	Patience 19	
+[08/20/2022 - 14:01:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:02:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11839		Train Loss      7.594	Valid Loss   114.142	f1: 20.39	Patience 20	
+[08/20/2022 - 14:02:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:02:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11903		Train Loss      5.970	Valid Loss   112.839	f1: 23.75	Patience 21	
+[08/20/2022 - 14:02:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:03:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 11967		Train Loss      6.396	Valid Loss   113.249	f1: 23.73	Patience 22	
+[08/20/2022 - 14:03:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:03:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12031		Train Loss      7.074	Valid Loss   113.934	f1: 22.71	Patience 23	
+[08/20/2022 - 14:03:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:04:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12095		Train Loss      8.111	Valid Loss   100.012	f1: 22.77	Patience 24	
+[08/20/2022 - 14:04:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:04:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12159		Train Loss      7.732	Valid Loss   102.483	f1: 21.14	Patience 25	
+[08/20/2022 - 14:04:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:05:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12223		Train Loss      8.430	Valid Loss   115.805	f1: 22.53	Patience 26	
+[08/20/2022 - 14:05:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:05:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12287		Train Loss      5.885	Valid Loss   119.805	f1: 22.83	Patience 27	
+[08/20/2022 - 14:05:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:06:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12351		Train Loss      6.923	Valid Loss   130.244	f1: 19.56	Patience 28	
+[08/20/2022 - 14:06:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:06:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12415		Train Loss      7.044	Valid Loss   155.689	f1: 25.14	Patience 29	
+[08/20/2022 - 14:06:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:07:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12479		Train Loss      6.629	Valid Loss   119.159	f1: 21.00	Patience 30	
+[08/20/2022 - 14:07:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:07:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12543		Train Loss      8.271	Valid Loss   102.939	f1: 21.16	Patience 31	
+[08/20/2022 - 14:07:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:08:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12607		Train Loss      5.510	Valid Loss   134.245	f1: 22.45	Patience 32	
+[08/20/2022 - 14:08:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:08:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12671		Train Loss      5.986	Valid Loss   117.658	f1: 22.70	Patience 33	
+[08/20/2022 - 14:08:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:09:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12735		Train Loss      7.574	Valid Loss   129.056	f1: 24.73	Patience 34	
+[08/20/2022 - 14:09:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:09:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12799		Train Loss      7.199	Valid Loss   109.541	f1: 21.29	Patience 35	
+[08/20/2022 - 14:09:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:10:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12863		Train Loss      6.731	Valid Loss   111.912	f1: 24.06	Patience 36	
+[08/20/2022 - 14:10:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:10:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12927		Train Loss      7.256	Valid Loss   115.738	f1: 23.92	Patience 37	
+[08/20/2022 - 14:10:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:11:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 12991		Train Loss      5.013	Valid Loss   126.661	f1: 22.78	Patience 38	
+[08/20/2022 - 14:11:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:11:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13055		Train Loss      5.950	Valid Loss   128.299	f1: 22.26	Patience 39	
+[08/20/2022 - 14:11:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:12:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13119		Train Loss      6.345	Valid Loss   122.959	f1: 19.41	Patience 40	
+[08/20/2022 - 14:12:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:12:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13183		Train Loss      6.727	Valid Loss   125.196	f1: 23.16	Patience 41	
+[08/20/2022 - 14:12:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:13:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13247		Train Loss      8.561	Valid Loss   124.306	f1: 22.47	Patience 42	
+[08/20/2022 - 14:13:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:13:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13311		Train Loss      5.830	Valid Loss   119.307	f1: 23.17	Patience 43	
+[08/20/2022 - 14:13:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:14:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13375		Train Loss      5.876	Valid Loss   134.981	f1: 19.70	Patience 44	
+[08/20/2022 - 14:14:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:14:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13439		Train Loss      6.695	Valid Loss   137.535	f1: 25.40	Patience 0	
+[08/20/2022 - 14:14:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:14:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13503		Train Loss      7.852	Valid Loss   139.462	f1: 23.84	Patience 1	
+[08/20/2022 - 14:14:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:15:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13567		Train Loss      8.665	Valid Loss   113.356	f1: 20.42	Patience 2	
+[08/20/2022 - 14:15:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:15:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13631		Train Loss      7.400	Valid Loss   132.127	f1: 22.84	Patience 3	
+[08/20/2022 - 14:15:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:16:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13695		Train Loss      6.337	Valid Loss   122.440	f1: 22.47	Patience 4	
+[08/20/2022 - 14:16:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:16:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13759		Train Loss      7.026	Valid Loss   118.289	f1: 23.09	Patience 5	
+[08/20/2022 - 14:16:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:17:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13823		Train Loss      7.749	Valid Loss   145.854	f1: 20.68	Patience 6	
+[08/20/2022 - 14:17:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:17:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13887		Train Loss      7.306	Valid Loss   141.800	f1: 23.55	Patience 7	
+[08/20/2022 - 14:17:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:18:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 13951		Train Loss      8.537	Valid Loss   135.953	f1: 23.60	Patience 8	
+[08/20/2022 - 14:18:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:18:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14015		Train Loss      6.466	Valid Loss   147.857	f1: 21.43	Patience 9	
+[08/20/2022 - 14:18:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:19:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14079		Train Loss      6.541	Valid Loss   120.611	f1: 21.27	Patience 10	
+[08/20/2022 - 14:19:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:19:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14143		Train Loss      7.448	Valid Loss   117.267	f1: 21.80	Patience 11	
+[08/20/2022 - 14:19:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:20:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14207		Train Loss      6.518	Valid Loss   129.243	f1: 20.86	Patience 12	
+[08/20/2022 - 14:20:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:20:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14271		Train Loss      7.124	Valid Loss   148.696	f1: 21.71	Patience 13	
+[08/20/2022 - 14:20:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:21:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14335		Train Loss      5.646	Valid Loss   171.270	f1: 21.68	Patience 14	
+[08/20/2022 - 14:21:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:21:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14399		Train Loss      5.150	Valid Loss   135.549	f1: 21.17	Patience 15	
+[08/20/2022 - 14:21:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:22:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14463		Train Loss      6.179	Valid Loss   131.661	f1: 21.38	Patience 16	
+[08/20/2022 - 14:22:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:22:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14527		Train Loss      6.315	Valid Loss   140.952	f1: 20.98	Patience 17	
+[08/20/2022 - 14:22:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:23:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14591		Train Loss      6.368	Valid Loss   161.109	f1: 25.67	Patience 0	
+[08/20/2022 - 14:23:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:23:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14655		Train Loss      7.255	Valid Loss   132.321	f1: 22.22	Patience 1	
+[08/20/2022 - 14:23:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:24:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14719		Train Loss      4.563	Valid Loss   157.863	f1: 21.90	Patience 2	
+[08/20/2022 - 14:24:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:24:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14783		Train Loss      5.266	Valid Loss   135.377	f1: 22.77	Patience 3	
+[08/20/2022 - 14:24:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:25:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14847		Train Loss      6.586	Valid Loss   167.918	f1: 25.32	Patience 4	
+[08/20/2022 - 14:25:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:25:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14911		Train Loss      7.060	Valid Loss   141.490	f1: 21.60	Patience 5	
+[08/20/2022 - 14:25:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:26:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 14975		Train Loss      6.589	Valid Loss   122.071	f1: 22.57	Patience 6	
+[08/20/2022 - 14:26:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:26:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15039		Train Loss      6.451	Valid Loss   146.838	f1: 20.31	Patience 7	
+[08/20/2022 - 14:26:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:26:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15103		Train Loss      5.255	Valid Loss   146.284	f1: 23.69	Patience 8	
+[08/20/2022 - 14:26:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:27:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15167		Train Loss      5.647	Valid Loss   147.353	f1: 23.16	Patience 9	
+[08/20/2022 - 14:27:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:27:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15231		Train Loss      4.964	Valid Loss   152.928	f1: 23.51	Patience 10	
+[08/20/2022 - 14:27:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:28:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15295		Train Loss      6.850	Valid Loss   146.665	f1: 20.53	Patience 11	
+[08/20/2022 - 14:28:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:28:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15359		Train Loss      7.878	Valid Loss   117.502	f1: 22.20	Patience 12	
+[08/20/2022 - 14:28:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:29:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15423		Train Loss      6.171	Valid Loss   138.671	f1: 23.23	Patience 13	
+[08/20/2022 - 14:29:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:29:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15487		Train Loss      6.907	Valid Loss   143.597	f1: 24.94	Patience 14	
+[08/20/2022 - 14:29:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:30:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15551		Train Loss      7.619	Valid Loss   137.473	f1: 22.73	Patience 15	
+[08/20/2022 - 14:30:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:30:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15615		Train Loss      7.210	Valid Loss   136.716	f1: 26.14	Patience 0	
+[08/20/2022 - 14:30:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:31:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15679		Train Loss      6.955	Valid Loss   131.725	f1: 23.62	Patience 1	
+[08/20/2022 - 14:31:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:31:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15743		Train Loss      5.907	Valid Loss   179.294	f1: 25.52	Patience 2	
+[08/20/2022 - 14:31:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:32:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15807		Train Loss      5.451	Valid Loss   165.269	f1: 22.51	Patience 3	
+[08/20/2022 - 14:32:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:32:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15871		Train Loss      6.030	Valid Loss   138.755	f1: 23.96	Patience 4	
+[08/20/2022 - 14:32:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:33:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15935		Train Loss      5.884	Valid Loss   148.827	f1: 21.71	Patience 5	
+[08/20/2022 - 14:33:16] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:33:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 15999		Train Loss      7.126	Valid Loss   149.695	f1: 22.59	Patience 6	
+[08/20/2022 - 14:33:45] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:34:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16063		Train Loss      8.724	Valid Loss   141.761	f1: 22.37	Patience 7	
+[08/20/2022 - 14:34:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:34:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16127		Train Loss      5.333	Valid Loss   174.478	f1: 24.81	Patience 8	
+[08/20/2022 - 14:34:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:35:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16191		Train Loss      6.731	Valid Loss   164.342	f1: 24.87	Patience 9	
+[08/20/2022 - 14:35:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:35:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16255		Train Loss      6.035	Valid Loss   134.197	f1: 22.79	Patience 10	
+[08/20/2022 - 14:35:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:36:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16319		Train Loss      7.826	Valid Loss   126.771	f1: 22.37	Patience 11	
+[08/20/2022 - 14:36:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:36:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16383		Train Loss      9.462	Valid Loss   123.223	f1: 21.46	Patience 12	
+[08/20/2022 - 14:36:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:37:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16447		Train Loss      6.769	Valid Loss   147.326	f1: 22.66	Patience 13	
+[08/20/2022 - 14:37:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:37:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16511		Train Loss      6.066	Valid Loss   147.477	f1: 24.56	Patience 14	
+[08/20/2022 - 14:37:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:38:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16575		Train Loss      6.506	Valid Loss   143.774	f1: 20.85	Patience 15	
+[08/20/2022 - 14:38:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:38:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16639		Train Loss      6.752	Valid Loss   134.537	f1: 22.91	Patience 16	
+[08/20/2022 - 14:38:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:39:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16703		Train Loss      6.242	Valid Loss   162.094	f1: 24.80	Patience 17	
+[08/20/2022 - 14:39:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:39:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16767		Train Loss      6.109	Valid Loss   161.884	f1: 23.44	Patience 18	
+[08/20/2022 - 14:39:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:40:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16831		Train Loss      4.196	Valid Loss   160.312	f1: 21.80	Patience 19	
+[08/20/2022 - 14:40:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:40:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16895		Train Loss      5.606	Valid Loss   179.211	f1: 23.17	Patience 20	
+[08/20/2022 - 14:40:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:41:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 16959		Train Loss      5.817	Valid Loss   169.026	f1: 21.44	Patience 21	
+[08/20/2022 - 14:41:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:41:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17023		Train Loss      6.336	Valid Loss   131.497	f1: 22.41	Patience 22	
+[08/20/2022 - 14:41:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:41:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17087		Train Loss      9.968	Valid Loss   132.426	f1: 22.38	Patience 23	
+[08/20/2022 - 14:41:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:42:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17151		Train Loss      7.080	Valid Loss   154.766	f1: 21.87	Patience 24	
+[08/20/2022 - 14:42:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:42:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17215		Train Loss     15.341	Valid Loss   140.389	f1: 22.04	Patience 25	
+[08/20/2022 - 14:42:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:43:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17279		Train Loss      7.256	Valid Loss   147.728	f1: 23.05	Patience 26	
+[08/20/2022 - 14:43:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:43:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17343		Train Loss      6.788	Valid Loss   141.860	f1: 21.32	Patience 27	
+[08/20/2022 - 14:43:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:44:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17407		Train Loss      5.879	Valid Loss   148.473	f1: 22.91	Patience 28	
+[08/20/2022 - 14:44:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:44:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17471		Train Loss      6.482	Valid Loss   162.393	f1: 23.02	Patience 29	
+[08/20/2022 - 14:44:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:45:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17535		Train Loss      4.829	Valid Loss   170.616	f1: 23.94	Patience 30	
+[08/20/2022 - 14:45:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:45:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17599		Train Loss      5.511	Valid Loss   157.620	f1: 23.95	Patience 31	
+[08/20/2022 - 14:45:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:46:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17663		Train Loss      4.495	Valid Loss   175.228	f1: 25.26	Patience 32	
+[08/20/2022 - 14:46:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:46:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17727		Train Loss      5.665	Valid Loss   151.076	f1: 23.12	Patience 33	
+[08/20/2022 - 14:46:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:47:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17791		Train Loss      5.363	Valid Loss   150.778	f1: 22.91	Patience 34	
+[08/20/2022 - 14:47:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:47:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17855		Train Loss      4.178	Valid Loss   196.432	f1: 23.49	Patience 35	
+[08/20/2022 - 14:47:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:48:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17919		Train Loss      4.133	Valid Loss   176.064	f1: 23.46	Patience 36	
+[08/20/2022 - 14:48:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:48:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 17983		Train Loss      6.136	Valid Loss   164.843	f1: 23.61	Patience 37	
+[08/20/2022 - 14:48:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:49:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18047		Train Loss      5.207	Valid Loss   193.912	f1: 24.07	Patience 38	
+[08/20/2022 - 14:49:14] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:49:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18111		Train Loss      5.499	Valid Loss   144.078	f1: 23.49	Patience 39	
+[08/20/2022 - 14:49:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:50:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18175		Train Loss      5.077	Valid Loss   180.578	f1: 23.74	Patience 40	
+[08/20/2022 - 14:50:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:50:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18239		Train Loss      4.244	Valid Loss   177.245	f1: 22.42	Patience 41	
+[08/20/2022 - 14:50:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:51:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18303		Train Loss      4.631	Valid Loss   187.984	f1: 21.18	Patience 42	
+[08/20/2022 - 14:51:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:51:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18367		Train Loss      4.391	Valid Loss   151.367	f1: 23.53	Patience 43	
+[08/20/2022 - 14:51:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:52:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18431		Train Loss      4.689	Valid Loss   178.900	f1: 22.95	Patience 44	
+[08/20/2022 - 14:52:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:52:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18495		Train Loss      5.526	Valid Loss   163.607	f1: 24.93	Patience 45	
+[08/20/2022 - 14:52:37] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:53:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18559		Train Loss      3.855	Valid Loss   187.740	f1: 23.83	Patience 46	
+[08/20/2022 - 14:53:06] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:53:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18623		Train Loss      5.353	Valid Loss   174.739	f1: 24.04	Patience 47	
+[08/20/2022 - 14:53:35] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:54:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18687		Train Loss      4.768	Valid Loss   205.546	f1: 23.95	Patience 48	
+[08/20/2022 - 14:54:04] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:54:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18751		Train Loss      4.657	Valid Loss   174.128	f1: 22.61	Patience 49	
+[08/20/2022 - 14:54:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:55:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18815		Train Loss      6.356	Valid Loss   195.590	f1: 22.80	Patience 50	
+[08/20/2022 - 14:55:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:55:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18879		Train Loss      4.978	Valid Loss   230.230	f1: 26.98	Patience 0	
+[08/20/2022 - 14:55:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:55:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 18943		Train Loss      5.214	Valid Loss   209.696	f1: 24.49	Patience 1	
+[08/20/2022 - 14:55:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:56:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19007		Train Loss      4.486	Valid Loss   196.639	f1: 23.83	Patience 2	
+[08/20/2022 - 14:56:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:56:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19071		Train Loss      5.338	Valid Loss   179.101	f1: 23.27	Patience 3	
+[08/20/2022 - 14:56:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:57:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19135		Train Loss      5.246	Valid Loss   181.303	f1: 21.28	Patience 4	
+[08/20/2022 - 14:57:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:57:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19199		Train Loss      5.433	Valid Loss   166.984	f1: 24.26	Patience 5	
+[08/20/2022 - 14:57:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:58:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19263		Train Loss      4.089	Valid Loss   202.138	f1: 24.01	Patience 6	
+[08/20/2022 - 14:58:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:58:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19327		Train Loss      4.366	Valid Loss   167.014	f1: 22.04	Patience 7	
+[08/20/2022 - 14:58:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:59:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19391		Train Loss      3.964	Valid Loss   255.308	f1: 24.21	Patience 8	
+[08/20/2022 - 14:59:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 14:59:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19455		Train Loss      4.582	Valid Loss   182.267	f1: 23.15	Patience 9	
+[08/20/2022 - 14:59:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:00:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19519		Train Loss      5.200	Valid Loss   148.348	f1: 22.91	Patience 10	
+[08/20/2022 - 15:00:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:00:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19583		Train Loss      4.110	Valid Loss   218.888	f1: 22.90	Patience 11	
+[08/20/2022 - 15:00:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:01:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19647		Train Loss      4.085	Valid Loss   226.157	f1: 24.72	Patience 12	
+[08/20/2022 - 15:01:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:01:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19711		Train Loss      4.138	Valid Loss   180.551	f1: 22.06	Patience 13	
+[08/20/2022 - 15:01:43] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:02:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19775		Train Loss      6.562	Valid Loss   165.148	f1: 25.42	Patience 14	
+[08/20/2022 - 15:02:12] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:02:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19839		Train Loss      6.489	Valid Loss   160.329	f1: 21.04	Patience 15	
+[08/20/2022 - 15:02:41] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:03:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19903		Train Loss      5.438	Valid Loss   217.223	f1: 19.75	Patience 16	
+[08/20/2022 - 15:03:10] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:03:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 19967		Train Loss      5.358	Valid Loss   196.907	f1: 23.59	Patience 17	
+[08/20/2022 - 15:03:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:04:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20031		Train Loss      6.658	Valid Loss   192.334	f1: 24.36	Patience 18	
+[08/20/2022 - 15:04:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:04:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20095		Train Loss      6.487	Valid Loss   181.677	f1: 23.71	Patience 19	
+[08/20/2022 - 15:04:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:05:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20159		Train Loss      6.270	Valid Loss   168.089	f1: 22.65	Patience 20	
+[08/20/2022 - 15:05:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:05:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20223		Train Loss      8.204	Valid Loss   158.191	f1: 21.12	Patience 21	
+[08/20/2022 - 15:05:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:06:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20287		Train Loss      5.743	Valid Loss   160.131	f1: 22.43	Patience 22	
+[08/20/2022 - 15:06:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:06:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20351		Train Loss      5.741	Valid Loss   172.035	f1: 22.38	Patience 23	
+[08/20/2022 - 15:06:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:07:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20415		Train Loss      5.466	Valid Loss   171.519	f1: 22.91	Patience 24	
+[08/20/2022 - 15:07:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:07:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20479		Train Loss      5.892	Valid Loss   148.499	f1: 23.06	Patience 25	
+[08/20/2022 - 15:07:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:08:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20543		Train Loss      6.105	Valid Loss   158.187	f1: 21.99	Patience 26	
+[08/20/2022 - 15:08:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:08:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20607		Train Loss      5.223	Valid Loss   228.805	f1: 23.54	Patience 27	
+[08/20/2022 - 15:08:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:08:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20671		Train Loss      5.031	Valid Loss   162.920	f1: 23.14	Patience 28	
+[08/20/2022 - 15:08:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:09:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20735		Train Loss      4.811	Valid Loss   183.091	f1: 22.44	Patience 29	
+[08/20/2022 - 15:09:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:09:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20799		Train Loss      4.451	Valid Loss   171.321	f1: 22.32	Patience 30	
+[08/20/2022 - 15:09:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:10:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20863		Train Loss      5.128	Valid Loss   189.681	f1: 21.94	Patience 31	
+[08/20/2022 - 15:10:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:10:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20927		Train Loss      4.793	Valid Loss   204.457	f1: 23.41	Patience 32	
+[08/20/2022 - 15:10:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:11:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 20991		Train Loss      3.635	Valid Loss   226.515	f1: 26.25	Patience 33	
+[08/20/2022 - 15:11:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:11:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21055		Train Loss      3.764	Valid Loss   210.570	f1: 24.41	Patience 34	
+[08/20/2022 - 15:11:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:12:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21119		Train Loss      4.468	Valid Loss   194.187	f1: 21.71	Patience 35	
+[08/20/2022 - 15:12:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:12:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21183		Train Loss      5.288	Valid Loss   223.795	f1: 24.24	Patience 36	
+[08/20/2022 - 15:12:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:13:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21247		Train Loss      5.324	Valid Loss   199.483	f1: 21.25	Patience 37	
+[08/20/2022 - 15:13:18] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:13:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21311		Train Loss      4.920	Valid Loss   234.707	f1: 23.18	Patience 38	
+[08/20/2022 - 15:13:47] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:14:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21375		Train Loss      4.189	Valid Loss   229.137	f1: 23.47	Patience 39	
+[08/20/2022 - 15:14:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:14:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21439		Train Loss      4.855	Valid Loss   217.700	f1: 22.68	Patience 40	
+[08/20/2022 - 15:14:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:15:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21503		Train Loss      4.457	Valid Loss   219.238	f1: 22.79	Patience 41	
+[08/20/2022 - 15:15:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:15:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21567		Train Loss      5.002	Valid Loss   205.113	f1: 22.87	Patience 42	
+[08/20/2022 - 15:15:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:16:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21631		Train Loss      5.197	Valid Loss   183.734	f1: 24.19	Patience 43	
+[08/20/2022 - 15:16:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:16:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21695		Train Loss      4.183	Valid Loss   236.137	f1: 23.09	Patience 44	
+[08/20/2022 - 15:16:39] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:17:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21759		Train Loss      4.449	Valid Loss   195.843	f1: 22.18	Patience 45	
+[08/20/2022 - 15:17:08] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:17:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21823		Train Loss      4.731	Valid Loss   191.614	f1: 22.75	Patience 46	
+[08/20/2022 - 15:17:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:18:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21887		Train Loss      4.372	Valid Loss   211.674	f1: 23.81	Patience 47	
+[08/20/2022 - 15:18:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:18:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 21951		Train Loss      4.896	Valid Loss   223.250	f1: 21.71	Patience 48	
+[08/20/2022 - 15:18:33] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:19:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22015		Train Loss      5.088	Valid Loss   263.425	f1: 24.14	Patience 49	
+[08/20/2022 - 15:19:02] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:19:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22079		Train Loss      4.199	Valid Loss   214.777	f1: 23.29	Patience 50	
+[08/20/2022 - 15:19:31] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:20:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22143		Train Loss      4.342	Valid Loss   202.273	f1: 23.32	Patience 51	
+[08/20/2022 - 15:20:00] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:20:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22207		Train Loss      5.005	Valid Loss   254.302	f1: 24.25	Patience 52	
+[08/20/2022 - 15:20:29] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:20:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22271		Train Loss      4.679	Valid Loss   232.470	f1: 23.59	Patience 53	
+[08/20/2022 - 15:20:58] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:21:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22335		Train Loss      5.221	Valid Loss   217.603	f1: 22.92	Patience 54	
+[08/20/2022 - 15:21:27] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:21:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22399		Train Loss      4.686	Valid Loss   194.058	f1: 21.66	Patience 55	
+[08/20/2022 - 15:21:56] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:22:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22463		Train Loss      5.858	Valid Loss   211.126	f1: 21.14	Patience 56	
+[08/20/2022 - 15:22:25] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:22:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22527		Train Loss      6.884	Valid Loss   185.319	f1: 18.46	Patience 57	
+[08/20/2022 - 15:22:54] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:23:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22591		Train Loss      6.792	Valid Loss   190.233	f1: 22.12	Patience 58	
+[08/20/2022 - 15:23:23] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:23:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22655		Train Loss      6.144	Valid Loss   218.513	f1: 22.42	Patience 59	
+[08/20/2022 - 15:23:52] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:24:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22719		Train Loss      4.100	Valid Loss   277.500	f1: 23.43	Patience 60	
+[08/20/2022 - 15:24:21] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:24:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22783		Train Loss      5.167	Valid Loss   191.708	f1: 21.91	Patience 61	
+[08/20/2022 - 15:24:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:25:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22847		Train Loss      5.234	Valid Loss   240.561	f1: 22.82	Patience 62	
+[08/20/2022 - 15:25:19] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:25:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22911		Train Loss      5.235	Valid Loss   172.565	f1: 22.20	Patience 63	
+[08/20/2022 - 15:25:48] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:26:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 22975		Train Loss      5.703	Valid Loss   185.721	f1: 22.29	Patience 64	
+[08/20/2022 - 15:26:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:26:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23039		Train Loss      6.864	Valid Loss   158.516	f1: 21.95	Patience 65	
+[08/20/2022 - 15:26:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:27:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23103		Train Loss      5.395	Valid Loss   197.781	f1: 22.86	Patience 66	
+[08/20/2022 - 15:27:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:27:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23167		Train Loss      4.873	Valid Loss   183.366	f1: 22.22	Patience 67	
+[08/20/2022 - 15:27:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:28:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23231		Train Loss      5.516	Valid Loss   231.067	f1: 24.21	Patience 68	
+[08/20/2022 - 15:28:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:28:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23295		Train Loss      5.242	Valid Loss   203.838	f1: 22.68	Patience 69	
+[08/20/2022 - 15:28:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:29:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23359		Train Loss      5.095	Valid Loss   228.795	f1: 24.08	Patience 70	
+[08/20/2022 - 15:29:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:29:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23423		Train Loss      4.114	Valid Loss   268.969	f1: 24.83	Patience 71	
+[08/20/2022 - 15:29:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:30:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23487		Train Loss      6.170	Valid Loss   205.055	f1: 23.85	Patience 72	
+[08/20/2022 - 15:30:09] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:30:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23551		Train Loss      5.535	Valid Loss   187.478	f1: 23.05	Patience 73	
+[08/20/2022 - 15:30:38] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:31:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23615		Train Loss      5.351	Valid Loss   200.862	f1: 24.76	Patience 74	
+[08/20/2022 - 15:31:07] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:31:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23679		Train Loss      5.163	Valid Loss   189.787	f1: 24.20	Patience 75	
+[08/20/2022 - 15:31:36] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:32:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23743		Train Loss      4.794	Valid Loss   192.298	f1: 22.48	Patience 76	
+[08/20/2022 - 15:32:05] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:32:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23807		Train Loss      5.455	Valid Loss   224.641	f1: 22.89	Patience 77	
+[08/20/2022 - 15:32:34] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:33:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23871		Train Loss      5.694	Valid Loss   190.393	f1: 23.08	Patience 78	
+[08/20/2022 - 15:33:03] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:33:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23935		Train Loss      5.219	Valid Loss   158.475	f1: 23.95	Patience 79	
+[08/20/2022 - 15:33:32] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:34:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 23999		Train Loss      5.302	Valid Loss   199.605	f1: 22.58	Patience 80	
+[08/20/2022 - 15:34:01] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:34:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24063		Train Loss      4.417	Valid Loss   204.037	f1: 25.30	Patience 81	
+[08/20/2022 - 15:34:30] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:34:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24127		Train Loss      8.495	Valid Loss   215.612	f1: 23.27	Patience 82	
+[08/20/2022 - 15:34:59] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:35:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24191		Train Loss      5.978	Valid Loss   173.332	f1: 20.87	Patience 83	
+[08/20/2022 - 15:35:28] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:35:57] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24255		Train Loss      4.999	Valid Loss   190.713	f1: 23.54	Patience 84	
+[08/20/2022 - 15:35:57] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:36:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24319		Train Loss      5.258	Valid Loss   185.082	f1: 20.58	Patience 85	
+[08/20/2022 - 15:36:26] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:36:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24383		Train Loss      5.411	Valid Loss   215.943	f1: 24.53	Patience 86	
+[08/20/2022 - 15:36:55] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:37:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24447		Train Loss      5.612	Valid Loss   234.845	f1: 21.31	Patience 87	
+[08/20/2022 - 15:37:24] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:37:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24511		Train Loss      4.390	Valid Loss   211.053	f1: 23.93	Patience 88	
+[08/20/2022 - 15:37:53] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:38:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24575		Train Loss      4.328	Valid Loss   227.019	f1: 19.03	Patience 89	
+[08/20/2022 - 15:38:22] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:38:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24639		Train Loss      5.696	Valid Loss   182.049	f1: 19.93	Patience 90	
+[08/20/2022 - 15:38:51] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:39:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24703		Train Loss      4.958	Valid Loss   202.723	f1: 20.65	Patience 91	
+[08/20/2022 - 15:39:20] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:39:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24767		Train Loss      4.228	Valid Loss   215.318	f1: 22.58	Patience 92	
+[08/20/2022 - 15:39:49] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:40:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24831		Train Loss      5.386	Valid Loss   263.805	f1: 25.07	Patience 93	
+[08/20/2022 - 15:40:17] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:40:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24895		Train Loss      3.738	Valid Loss   216.199	f1: 21.86	Patience 94	
+[08/20/2022 - 15:40:46] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:41:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 24959		Train Loss      4.006	Valid Loss   196.271	f1: 22.45	Patience 95	
+[08/20/2022 - 15:41:15] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:41:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 25023		Train Loss      3.877	Valid Loss   223.880	f1: 22.01	Patience 96	
+[08/20/2022 - 15:41:44] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:42:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 25087		Train Loss      4.332	Valid Loss   198.862	f1: 20.89	Patience 97	
+[08/20/2022 - 15:42:13] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:42:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 25151		Train Loss      3.454	Valid Loss   262.153	f1: 23.43	Patience 98	
+[08/20/2022 - 15:42:42] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:43:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 25215		Train Loss      3.031	Valid Loss   241.618	f1: 20.92	Patience 99	
+[08/20/2022 - 15:43:11] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:43:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 97  	Step 25279		Train Loss      4.027	Valid Loss   250.929	f1: 21.36	Patience 100	
+[08/20/2022 - 15:43:40] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 99  	====================================================================================================	
+[08/20/2022 - 15:43:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 114  	models/MSR/devign/vlinevul/2/GGNNSumModel	Test Accuracy: 92.28	Precision: 28.26	Recall: 22.03	F1: 24.76	
+[08/20/2022 - 15:43:50] File "/home/<ANONYMOUS>/code/ReVeal/Devign/trainer.py", line 115  	====================================================================================================	

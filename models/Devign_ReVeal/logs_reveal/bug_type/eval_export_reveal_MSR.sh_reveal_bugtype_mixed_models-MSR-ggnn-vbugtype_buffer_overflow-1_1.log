@@ -1,0 +1,31 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_mixed/GGNNinput_graph_ggnn_1_vbugtype_buffer_overflow.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(74026, 200)
+(74026,)
+74026
+valid
+(9069, 200)
+(9069,)
+9069
+test
+(9214, 200)
+(9214,)
+9214
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_mixed/1
+Traceback (most recent call last):
+  File "Vuld_SySe/representation_learning/api_test.py", line 176, in <module>
+    model.load_state_dict(torch.load(save_path))
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/devign/reveal/vbugtype_buffer_overflow/RepresentationLearningModel.bin'

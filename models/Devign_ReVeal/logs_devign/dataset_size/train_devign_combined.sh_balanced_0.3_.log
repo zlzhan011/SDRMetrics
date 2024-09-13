@@ -1,0 +1,10 @@
+usage: main.py [-h] [--model_type {devign,ggnn}] --dataset DATASET --input_dir
+               INPUT_DIR --fold FOLD [--node_tag NODE_TAG]
+               [--graph_tag GRAPH_TAG] [--label_tag LABEL_TAG] --seed SEED
+               [--feature_size FEATURE_SIZE]
+               [--graph_embed_size GRAPH_EMBED_SIZE] [--num_steps NUM_STEPS]
+               [--batch_size BATCH_SIZE] [--train] [--holdout]
+               [--holdout_test] [--no_cuda] [--eval_export]
+               [--save_after_ggnn] [--stop_after_dataset] [--no_split]
+               [--model_bruh MODEL_BRUH]
+main.py: error: argument --seed: expected one argument

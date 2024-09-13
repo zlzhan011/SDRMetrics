@@ -1,0 +1,8 @@
+usage: api_test.py [-h] [--features {ggnn,wo_ggnn}] [--lambda1 LAMBDA1]
+                   [--lambda2 LAMBDA2] [--num_epoch NUM_EPOCH] [--baseline]
+                   [--baseline_balance] [--baseline_model BASELINE_MODEL]
+                   [--num_layers NUM_LAYERS] --input_dir INPUT_DIR
+                   [--fold FOLD] [--seed SEED] [--train] [--eval_export]
+                   [--holdout] [--holdout_test]
+                   [--features_bruh FEATURES_BRUH] [--model_bruh MODEL_BRUH]
+api_test.py: error: argument --seed: expected one argument

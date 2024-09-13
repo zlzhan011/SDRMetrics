@@ -1,0 +1,30 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_buffer_overflow/GGNNinput_graph_ggnn_1_vbugtype_value_propagation_errors.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(20343, 200)
+(20343,)
+20343
+valid
+(2512, 200)
+(2512,)
+2512
+test
+(2539, 200)
+(2539,)
+2539
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_buffer_overflow/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 2539 #Batches 40 first 5: [38, 79, 609, 742, 753] last 5: [117145, 117196, 117220, 117228, 117291]
+Number of Holdout Entries 0 #Batches 0 first 5: [] last 5: []
+40
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:00<00:27,  1.41it/s]100%|██████████| 40/40 [00:00<00:00, 49.41it/s]
+HOLDOUT RESULTS
+86.88460023631352 14.423076923076922 16.216216216216218 15.267175572519081

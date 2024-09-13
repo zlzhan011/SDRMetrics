@@ -1,0 +1,30 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_value_propagation_errors/GGNNinput_graph_ggnn_1_vbugtype_value_propagation_errors.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(8762, 200)
+(8762,)
+8762
+valid
+(1039, 200)
+(1039,)
+1039
+test
+(1094, 200)
+(1094,)
+1094
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_value_propagation_errors/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 1094 #Batches 18 first 5: [101, 552, 553, 556, 635] last 5: [114639, 114840, 116179, 116801, 116841]
+Number of Holdout Entries 0 #Batches 0 first 5: [] last 5: []
+18
+  0%|          | 0/18 [00:00<?, ?it/s]  6%|▌         | 1/18 [00:00<00:15,  1.10it/s]100%|██████████| 18/18 [00:00<00:00, 18.57it/s]
+HOLDOUT RESULTS
+92.23034734917734 25.757575757575758 32.075471698113205 28.571428571428577

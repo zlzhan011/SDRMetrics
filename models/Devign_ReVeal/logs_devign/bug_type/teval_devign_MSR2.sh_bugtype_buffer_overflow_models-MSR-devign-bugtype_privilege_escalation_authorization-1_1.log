@@ -1,0 +1,43 @@
+[08/21/2022 - 08:20:42] File "Devign/main.py", line 70  	Reading already processed data from data/MSR/full_experiment_real_data_processed/processed.bin!	
+load json -> msr mapping...
+done loading json -> msr mapping
+86185 keys missing from splits.csv
+5746 keys skipped because _after_
+skipped 91931 keys
+[08/21/2022 - 08:24:37] File "Devign/main.py", line 87  	20343	2512	2539	0	
+model: DevignModel(
+  (ggnn): GatedGraphConv(
+    (linears): ModuleList(
+      (0): Linear(in_features=200, out_features=200, bias=True)
+      (1): Linear(in_features=200, out_features=200, bias=True)
+      (2): Linear(in_features=200, out_features=200, bias=True)
+      (3): Linear(in_features=200, out_features=200, bias=True)
+      (4): Linear(in_features=200, out_features=200, bias=True)
+    )
+    (gru): GRUCell(200, 200)
+  )
+  (conv_l1): Conv1d(200, 200, kernel_size=(3,), stride=(1,))
+  (maxpool1): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2): Conv1d(200, 200, kernel_size=(1,), stride=(1,))
+  (maxpool2): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l1_for_concat): Conv1d(369, 369, kernel_size=(3,), stride=(1,))
+  (maxpool1_for_concat): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2_for_concat): Conv1d(369, 369, kernel_size=(1,), stride=(1,))
+  (maxpool2_for_concat): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (mlp_z): Linear(in_features=369, out_features=1, bias=True)
+  (mlp_y): Linear(in_features=200, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+[08/21/2022 - 08:24:37] File "Devign/main.py", line 102  	Total Parameters : 1148553	
+[08/21/2022 - 08:24:37] File "Devign/main.py", line 103  	####################################################################################################	
+loading weights for holdout models/MSR/devign/bugtype_privilege_escalation_authorization/1/GGNNSumModel-model.bin
+Traceback (most recent call last):
+  File "Devign/main.py", line 131, in <module>
+    model.load_state_dict(torch.load(save_path, map_location=map_location))
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/MSR/devign/bugtype_privilege_escalation_authorization/1/GGNNSumModel-model.bin'

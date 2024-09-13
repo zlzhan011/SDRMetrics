@@ -1,0 +1,29 @@
+cuda: True
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(0, 200)
+(0,)
+0
+valid
+(0, 200)
+(0,)
+0
+test
+(0, 200)
+(0,)
+0
+holdout
+(7305, 200)
+(7305,)
+7305
+checkpointing path: models/devign/reveal/vdiverse_holdout_0/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Holdout Entries 7305 #Batches 115 first 5: [37, 38, 39, 40, 41] last 5: [114590, 114592, 114594, 114612, 114614]
+115
+  0%|          | 0/115 [00:00<?, ?it/s]  1%|          | 1/115 [00:00<01:19,  1.44it/s] 37%|███▋      | 42/115 [00:00<00:01, 70.79it/s] 77%|███████▋  | 88/115 [00:00<00:00, 146.32it/s]100%|██████████| 115/115 [00:00<00:00, 120.07it/s]
+HOLDOUT RESULTS
+92.66255989048598 13.461538461538462 13.636363636363635 13.548387096774196

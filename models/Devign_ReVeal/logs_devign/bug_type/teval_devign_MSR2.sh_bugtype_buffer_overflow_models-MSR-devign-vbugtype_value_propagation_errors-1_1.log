@@ -1,0 +1,35 @@
+[08/21/2022 - 08:54:16] File "Devign/main.py", line 70  	Reading already processed data from data/MSR/full_experiment_real_data_processed/processed.bin!	
+load json -> msr mapping...
+done loading json -> msr mapping
+86185 keys missing from splits.csv
+5746 keys skipped because _after_
+skipped 91931 keys
+[08/21/2022 - 08:58:20] File "Devign/main.py", line 87  	20343	2512	2539	0	
+model: DevignModel(
+  (ggnn): GatedGraphConv(
+    (linears): ModuleList(
+      (0): Linear(in_features=200, out_features=200, bias=True)
+      (1): Linear(in_features=200, out_features=200, bias=True)
+      (2): Linear(in_features=200, out_features=200, bias=True)
+      (3): Linear(in_features=200, out_features=200, bias=True)
+      (4): Linear(in_features=200, out_features=200, bias=True)
+    )
+    (gru): GRUCell(200, 200)
+  )
+  (conv_l1): Conv1d(200, 200, kernel_size=(3,), stride=(1,))
+  (maxpool1): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2): Conv1d(200, 200, kernel_size=(1,), stride=(1,))
+  (maxpool2): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l1_for_concat): Conv1d(369, 369, kernel_size=(3,), stride=(1,))
+  (maxpool1_for_concat): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2_for_concat): Conv1d(369, 369, kernel_size=(1,), stride=(1,))
+  (maxpool2_for_concat): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (mlp_z): Linear(in_features=369, out_features=1, bias=True)
+  (mlp_y): Linear(in_features=200, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+[08/21/2022 - 08:58:20] File "Devign/main.py", line 102  	Total Parameters : 1148553	
+[08/21/2022 - 08:58:20] File "Devign/main.py", line 103  	####################################################################################################	
+loading weights for holdout models/MSR/devign/vbugtype_value_propagation_errors/1/GGNNSumModel-model.bin
+[08/21/2022 - 08:58:29] File "Devign/main.py", line 167  	Holdout Accuracy: 90.67	Precision: 13.89	Recall: 5.41	F1: 7.78	
+[08/21/2022 - 08:58:29] File "Devign/main.py", line 168  	====================================================================================================	

@@ -1,0 +1,32 @@
+[08/21/2022 - 08:48:41] File "Devign/main.py", line 70  	Reading already processed data from data/MSR/full_experiment_real_data_processed/processed.bin!	
+load json -> msr mapping...
+done loading json -> msr mapping
+86185 keys missing from splits.csv
+5746 keys skipped because _after_
+skipped 91931 keys
+[08/21/2022 - 08:52:49] File "Devign/main.py", line 87  	20343	2512	2539	0	
+model: GGNNSum(
+  (ggnn): GatedGraphConv(
+    (linears): ModuleList(
+      (0): Linear(in_features=200, out_features=200, bias=True)
+      (1): Linear(in_features=200, out_features=200, bias=True)
+      (2): Linear(in_features=200, out_features=200, bias=True)
+      (3): Linear(in_features=200, out_features=200, bias=True)
+      (4): Linear(in_features=200, out_features=200, bias=True)
+    )
+    (gru): GRUCell(200, 200)
+  )
+  (classifier): Linear(in_features=200, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+[08/21/2022 - 08:52:49] File "Devign/main.py", line 102  	Total Parameters : 442401	
+[08/21/2022 - 08:52:49] File "Devign/main.py", line 103  	####################################################################################################	
+loading weights for holdout models/MSR/devign/vbugtype_buffer_overflow/1/GGNNSumModel-model.bin
+Traceback (most recent call last):
+  File "Devign/main.py", line 131, in <module>
+    model.load_state_dict(torch.load(save_path, map_location=map_location))
+  File "/home/<ANONYMOUS>/miniconda3/envs/Devign38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1497, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for GGNNSum:
+	Missing key(s) in state_dict: "classifier.weight", "classifier.bias". 
+	Unexpected key(s) in state_dict: "conv_l1.weight", "conv_l1.bias", "conv_l2.weight", "conv_l2.bias", "conv_l1_for_concat.weight", "conv_l1_for_concat.bias", "conv_l2_for_concat.weight", "conv_l2_for_concat.bias", "mlp_z.weight", "mlp_z.bias", "mlp_y.weight", "mlp_y.bias". 

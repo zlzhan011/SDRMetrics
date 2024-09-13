@@ -1,0 +1,36 @@
+[08/21/2022 - 09:47:14] File "Devign/main.py", line 70  	Reading already processed data from data/MSR/full_experiment_real_data_processed/processed.bin!	
+loading splits from data/MSR/full_experiment_real_data_processed/vbugtype_value_propagation_errors/splits.csv
+load json -> msr mapping...
+done loading json -> msr mapping
+100684 keys missing from splits.csv
+5746 keys skipped because _after_
+skipped 106430 keys
+[08/21/2022 - 09:51:24] File "Devign/main.py", line 88  	8762	1039	1094	0	
+model: DevignModel(
+  (ggnn): GatedGraphConv(
+    (linears): ModuleList(
+      (0): Linear(in_features=200, out_features=200, bias=True)
+      (1): Linear(in_features=200, out_features=200, bias=True)
+      (2): Linear(in_features=200, out_features=200, bias=True)
+      (3): Linear(in_features=200, out_features=200, bias=True)
+      (4): Linear(in_features=200, out_features=200, bias=True)
+    )
+    (gru): GRUCell(200, 200)
+  )
+  (conv_l1): Conv1d(200, 200, kernel_size=(3,), stride=(1,))
+  (maxpool1): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2): Conv1d(200, 200, kernel_size=(1,), stride=(1,))
+  (maxpool2): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l1_for_concat): Conv1d(369, 369, kernel_size=(3,), stride=(1,))
+  (maxpool1_for_concat): MaxPool1d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv_l2_for_concat): Conv1d(369, 369, kernel_size=(1,), stride=(1,))
+  (maxpool2_for_concat): MaxPool1d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (mlp_z): Linear(in_features=369, out_features=1, bias=True)
+  (mlp_y): Linear(in_features=200, out_features=1, bias=True)
+  (sigmoid): Sigmoid()
+)
+[08/21/2022 - 09:51:24] File "Devign/main.py", line 103  	Total Parameters : 1148553	
+[08/21/2022 - 09:51:24] File "Devign/main.py", line 104  	####################################################################################################	
+loading weights for holdout models/MSR/devign/vbugtype_resource_allocation_free/1/GGNNSumModel-model.bin
+[08/21/2022 - 09:51:29] File "Devign/main.py", line 168  	Holdout Accuracy: 90.86	Precision: 8.77	Recall: 9.43	F1: 9.09	
+[08/21/2022 - 09:51:29] File "Devign/main.py", line 169  	====================================================================================================	

@@ -1,0 +1,30 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_resource_allocation_free/GGNNinput_graph_ggnn_1_vbugtype_resource_allocation_free.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(17389, 200)
+(17389,)
+17389
+valid
+(2141, 200)
+(2141,)
+2141
+test
+(2188, 200)
+(2188,)
+2188
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_resource_allocation_free/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 2188 #Batches 35 first 5: [327, 339, 343, 369, 383] last 5: [115784, 115794, 116428, 117016, 117036]
+Number of Holdout Entries 0 #Batches 0 first 5: [] last 5: []
+35
+  0%|          | 0/35 [00:00<?, ?it/s]  3%|▎         | 1/35 [00:00<00:29,  1.15it/s] 83%|████████▎ | 29/35 [00:00<00:00, 40.48it/s]100%|██████████| 35/35 [00:00<00:00, 35.49it/s]
+HOLDOUT RESULTS
+94.24131627056673 44.230769230769226 19.166666666666668 26.74418604651163

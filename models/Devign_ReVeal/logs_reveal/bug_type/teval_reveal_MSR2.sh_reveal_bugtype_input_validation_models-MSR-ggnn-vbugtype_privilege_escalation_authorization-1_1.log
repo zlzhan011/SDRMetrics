@@ -1,0 +1,30 @@
+cuda: True
+load data from data/MSR/full_experiment_real_data_processed/vbugtype_input_validation/GGNNinput_graph_ggnn_1_vbugtype_privilege_escalation_authorization.jsonlines
+Dataset	(117325, 200)	(117325,)	12059
+====================================================================================================
+train
+(11053, 200)
+(11053,)
+11053
+valid
+(1345, 200)
+(1345,)
+1345
+test
+(1354, 200)
+(1354,)
+1354
+holdout
+(0, 200)
+(0,)
+0
+checkpointing path: models/devign/reveal/vbugtype_input_validation/1
+Initializing dataset...
+Number of Train Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Valid Entries 0 #Batches 0 first 5: [] last 5: []
+Number of Test Entries 1354 #Batches 22 first 5: [198, 202, 211, 216, 225] last 5: [115909, 115962, 115995, 116402, 117085]
+Number of Holdout Entries 0 #Batches 0 first 5: [] last 5: []
+22
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:00<00:13,  1.57it/s]100%|██████████| 22/22 [00:00<00:00, 31.67it/s]
+HOLDOUT RESULTS
+93.57459379615952 26.08695652173913 18.461538461538463 21.62162162162162
